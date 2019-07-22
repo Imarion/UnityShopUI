@@ -59,7 +59,8 @@ public class SimpleObjectPool : MonoBehaviour
         }
     }
 
-    public class PooledObject
+    public class PooledObject : MonoBehaviour
     {
+        public SimpleObjectPool pool;
     }
 }
