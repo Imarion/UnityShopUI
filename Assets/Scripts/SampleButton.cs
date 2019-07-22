@@ -17,7 +17,7 @@ public class SampleButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        button.onClick.AddListener(HandleClick);
     }
 
     // Update is called once per frame
@@ -34,5 +34,10 @@ public class SampleButton : MonoBehaviour
         iconImage.sprite = item.icon;
 
         scrollList = currentScrollList;
+    }
+
+    public void HandleClick()
+    {
+        scrollList.TryTransferItemToOtherShop(item);
     }
 }
